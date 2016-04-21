@@ -12,8 +12,6 @@ function hobbies(s) {
   var textnode = document.createTextNode(s);
   node.appendChild(textnode);
   document.getElementById('hobbies').appendChild(node);
-  // document.getElementById('hobbies').innerHTML = 'I enjoy ' + s;
-  // console.log(document.getElementById('hobbies'));
 }
 
 useNext(hobbies);
