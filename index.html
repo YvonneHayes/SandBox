@@ -7,13 +7,21 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
   </head>
   <body>
-    <script id="tryThis" type="text/x-handlebars-template">
-      <div>
-        My Name is:{{name}}
-        I like: {{like}}
+    <div id="One">
+      <script id="tryThis" type="text/x-handlebars-template">
+        My Name is:{{name}} </br>
+        I like: {{like}} </br>
         I live in:{{city}}
-      </div>
-    </script>
+      </script>
+    </div>
+    <h2>And now let's do something else!</h2>
+    <div id="Two">
+      <script id="tryThisToo" type="text/x-handlebars-template">
+        This is where I'm from:{{homeTown}} </br>
+        You often hear me say this: {{quote}} </br>
+        I hate to do it but:{{{headline}}}
+      </script>
+    </div>
   </body>
   <script src='apps.js'></script>
 </html>
