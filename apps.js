@@ -7,6 +7,7 @@ function setRouteMappings() {
   page('about', about);
   page('contact', contact);
   page('game',game);
+  page('blog',blog);
   page('contact/:contactName', contact);
   page('*', notfound); // catch-all
 
@@ -28,6 +29,10 @@ function notfound() {
 
 function game (){
   $('p').text('play the game!');
+}
+
+function blog (){
+  $('p').text('read the blog!');
 }
 
 setRouteMappings();
