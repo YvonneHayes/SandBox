@@ -1,47 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Basic</title>
-    <script src="/page.js"></script>
-    <base href="/basic/" >
+    <meta charset="utf-8">
+    <title>SandBox</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
   </head>
   <body>
-    <h1>Basic</h1>
-    <p></p>
-    <ul>
-      <li><a href="./">/</a></li>
-      <li><a href="#whoop">#whoop</a></li>
-      <li><a href="./about">/about</a></li>
-      <li><a href="./contact">/contact</a></li>
-      <li><a href="./contact/me">/contact/me</a></li>
-      <li><a href="./not-found?foo=bar">/not-found</a></li>
-    </ul>
-
-    <script>
-      // the "notfound" implements a catch-all
-      // with page('*', notfound). Here we have
-      // no catch-all, so page.js will redirect
-      // to the location of paths which do not
-      // match any of the following routes
-      //
-      page.base('/basic');
-      page('/', index);
-      page('/about', about);
-      page('/contact', contact);
-      page('/contact/:contactName', contact);
-      page();
-      function index() {
-        document.querySelector('p')
-          .textContent = 'viewing index';
-      }
-      function about() {
-        document.querySelector('p')
-          .textContent = 'viewing about';
-      }
-      function contact(ctx) {
-        document.querySelector('p')
-          .textContent = 'viewing contact ' + (ctx.params.contactName || '');
-      }
+    <script id="tryThis" type="text/x-handlebars-template">
+      <div>
+        My Name is:{{name}}
+        I like: {{like}}
+        I live in:{{city}}
+      </div>
     </script>
   </body>
+  <script src='apps.js'></script>
 </html>
