@@ -13,19 +13,21 @@ function setRouteMappings() {
   page();
 }
 
-function index() { p.textContent = 'viewing index (home)'; }
-function about() { p.textContent = 'viewing about'; }
+function index() {
+  $('p').text('viewing index (home)');
+};
+function about() {
+  $('p').text('viewing about');
+};
 function contact(ctx) {
-  p.textContent = 'viewing contact ' + (ctx.params.contactName || '');
+  $('p').text('viewing contact ' + (ctx.params.contactName || ''));
 }
 function notfound() {
-  p.innerHTML ='<h3>OMG, page not found!</h3><img src="lost.jpg"></img>';
+  $('p').text('<h3>OMG, page not found!</h3><img src="lost.jpg"></img>');
 }
 
-// function game() { p.textContent = 'play the game!';}
-
 function game (){
-  $('p').text('PLAY IT!');
+  $('p').text('play the game!');
 }
 
 setRouteMappings();
