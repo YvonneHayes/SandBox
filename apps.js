@@ -24,7 +24,7 @@ function contact(ctx) {
   $('p').text('viewing contact ' + (ctx.params.contactName || ''));
 }
 function notfound() {
-  $('p').text('<h3>OMG, page not found!</h3><img src="lost.jpg"></img>');
+  $('p').text('Nothing to see here. Keep moving!');
 }
 
 function game (){
