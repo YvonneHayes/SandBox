@@ -49,7 +49,7 @@ function validateUserName(e) {
   e.preventDefault();
   var userName = document.forms['nameInput']['fname'].value;
   if (userName == null || userName == '') {
-    alert('Enter a name, dude!');
+    $('#userAlert').show();
     $('#output2').hide();
   }else {
     $('#output2').show();
