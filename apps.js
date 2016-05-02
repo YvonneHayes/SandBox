@@ -35,4 +35,23 @@ function message (currentUser){
 
   var badDay = useName(currentUser, 'itsbad');
   badDay('maybe leave the bike at home today....');
+
+  var soSoDay = useName(currentUser, 'itssoso');
+  soSoDay('Conditions are not ideal. Depends on you, dude...');
+};
+
+
+
+//Event Listeners for Submit Button
+submitButton.addEventListener('click', validateUserName);
+
+function validateUserName(e) {
+  e.preventDefault();
+  var userName = document.forms['nameInput']['fname'].value;
+  if (userName == null || userName == '') {
+    alert('Enter a name, dude!');
+    $('#output2').hide();
+  }else {
+    $('#output2').show();
+  }
 };
