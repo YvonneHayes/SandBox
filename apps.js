@@ -5,17 +5,11 @@ $(document).ready(function(){
   $('button').click(function(){
     var userName = $('input:text').val();
     useName(userName);
-    message(userName);
     localStorage.setItem('currentUser', userName);
     return userName;
   });
 });
 
-
-// function useName (currentUser){
-//   console.log(currentUser);
-//   $('#output').text('Hey ' + currentUser + ', what a great day for biking!');
-// };
 
 function useName(currentUser, goodDayOrBadDay) { //params of currentUser and what kind of day it is
   var makeGoodorBad = function(goodOrBad) {  //makeGoodorBad - to display correct kind of day later
@@ -52,6 +46,7 @@ function validateUserName(e) {
     $('#userAlert').show();
     $('#output2').hide();
   }else {
+    message(userName);
     $('#userAlert').hide();
     $('#output2').show();
     $('#nameForm').hide();
