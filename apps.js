@@ -36,9 +36,10 @@ function message (currentUser){
 
 
 
-//Event Listeners for Submit Button
+//Event Listeners for Submit Button1
 submitButton.addEventListener('click', validateUserName);
 
+//Validating the input for the Name Form
 function validateUserName(e) {
   e.preventDefault();
   var userName = document.forms['nameInput']['fname'].value;
@@ -52,3 +53,16 @@ function validateUserName(e) {
     $('#nameForm').hide();
   }
 };
+
+//Event Listener for Submit Button2
+submitButton2.addEventListener('click', validateLocation);
+
+//Validating the input for the Location Form
+
+function validateLocation(e){
+  e.preventDefault();
+  var locationName = document.forms['locationData']['flocationname'].value;
+  if (locationName == null || locationName == ''){
+    $('#userAlert2').show();
+  };
+}
