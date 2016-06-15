@@ -1,11 +1,16 @@
-function writeText(res){
-  response.writeHead(200, {'Content-Type':'text/plain'});
-  res.write(res);
-  res.end();
+var player = {
+  name: 'Link',
+  hp: 100
+};
+
+function getsHit(){
+  var newHp = player.hp - 5;
+  console.log(newHp);
+  player.hp = newHp;
 }
 
-function writeHtml(res){
-  response.writeHead(200, {'Content-Type': 'text/html'});
-  res.write('<' + res + '>');
-  res.end();
-}
+getsHit();
+
+getsHit();
+getsHit();
+getsHit();
