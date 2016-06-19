@@ -60,3 +60,4 @@ attackAndStaminaRegen();
 attackAndStaminaRegen();
 attackAndStaminaRegen();
 attackAndStaminaRegen();
+attackAndStaminaRegen();
